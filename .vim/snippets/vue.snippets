@@ -1,0 +1,94 @@
+snippet vfile
+	<template>
+		<div>
+			${1}
+		</div>
+	</template>
+
+	<script>
+		export default {
+			data () {
+				return {
+					${2}
+				}
+			},
+
+			mounted () {
+			},
+
+			methods: {
+				${3}
+			}
+		}
+	</script>
+
+snippet vstyle
+	<style noscope type="sass">
+		${1}
+	</style>
+
+snippet valert
+	<v-alert
+		type="${1}"
+	>
+		${2}
+	</v-alert>
+
+snippet vdialog
+	<v-dialog
+		v-model="dialog"
+		width="${1}"
+	>
+		${2}
+	</v-dialog>
+
+snippet vform
+	<v-form
+		ref="form"
+		v-model="valid"
+		:lazy-validation="true"
+	>
+		${1}
+	</v-form>
+
+snippet vimp
+	import ${1} from '${2}'
+
+snippet vrow
+	<v-row>
+		${1}
+	</v-row>
+
+snippet vcol
+	<v-col>
+		${1}
+	</v-row>
+
+snippet vtext
+	<v-text-field
+		v-model="${1}"
+		label="${2}"
+	>
+		${3}
+	</v-text-field>
+
+snippet vcard
+	<v-card
+		class="mx-auto"
+	>
+		<v-card-title>
+			${1}
+		</v-card-title>
+		<v-card-subttitle>
+			${2}
+		</v-card-subtitle>
+		<v-card-text>
+			${3}
+		</v-card-text>
+		<v-card-actions>
+			${4}
+		</v-card-actions>
+	</v-card>
+
+snippet vdivi
+	<v-divider />

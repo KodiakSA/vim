@@ -1,4 +1,15 @@
-snippet met
+snippet pfun
 	public function ${1} (${2}) {
 		${3}
 	}
+
+snippet lpost
+	Route::post('${1}', '${2}');
+
+snippet lget
+	Route::get('${1}', '${2}');
+
+snippet lrg 
+	Route::middleware(['${1}'])->group(function () {
+		${2}
+	});

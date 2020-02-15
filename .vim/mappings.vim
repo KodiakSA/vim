@@ -35,8 +35,10 @@ nmap <C-T> :tag
 nmap <Leader>lr :tabedit routes/web.php<cr>
 nmap <Leader>la :tabedit routes/api.php<cr>
 nmap <Leader>lm :!php artisan make:
+nmap <Leader>lc :!php artisan command:
 nmap <Leader>lfc :CtrlP<cr>app/Http/Controllers/
 nmap <Leader>lfm :CtrlP<cr>app/Models/
+nmap <Leader>lfo :CtrlP<cr>app/Console/Commands/
 
 "-------------Nuxt Specific------------------------"
 nmap <Leader>vfc :CtrlP<cr>components/
