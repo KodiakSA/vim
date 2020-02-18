@@ -28,5 +28,6 @@ call vundle#begin()
   Plugin  'blueyed/vim-diminactive'
   Plugin  'posva/vim-vue'
   Plugin  'bling/vim-bufferline'
+  Plugin  'tpope/vim-dadbod'
 call vundle#end()					" required
 filetype plugin indent on				" require

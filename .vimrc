@@ -25,13 +25,12 @@ set incsearch						"Highlight incrementally on searching
 "-----------------Visuals---------------"
 colorscheme gruvbox
 set background=dark
-set t_CO=256						"Force terminal to have 256 colors
 let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled = 1
 
 set backspace=indent,eol,start				"Make backspace behave like every other editor
 
-hi LineNr ctermbg=bg
+hi LineNr ctermbg=black
 
 let g:diminactive_use_syntax=1              "Dim the syntax in an inactive split
 "-----------------Split Management------"

@@ -8,11 +8,14 @@ nmap <Leader>em :tabedit ~/.vim/mappings.vim<cr>
 nmap <Leader>ec :tabedit ~/.vim/commands.vim<cr>
 
 "Make it easy to edit the fileextensions file
-nmap <Leader>ef :tabedit ~/.vim/commands.vim<cr>
+nmap <Leader>ef :tabedit ~/.vim/fileextensions.vim<cr>
 
 "Make it easy to edit the plugins file
 nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 
+"Make it easy to edit the snipptes file
+nmap <Leader>esp :tabedit ~/.vim/snippets/php.snippets<cr>
+nmap <Leader>esv :tabedit ~/.vim/snippets/vue.snippets<cr>
 "Turn off highlight for search
 nmap <Leader><space> :nohlsearch<cr>
 
