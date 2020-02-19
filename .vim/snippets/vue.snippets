@@ -90,3 +90,26 @@ snippet vcard
 
 snippet vdivi
 	<v-divider />
+
+snippet vswitch
+	<v-switch
+		v-model='${1}'
+		label='${@}'
+	/>
+
+snippet axiosp
+	this.$axios.$post('${1}', {
+		${2}
+	}).then(function (response) {
+		${3}
+	}.bind(this))
+
+
+snippet axiosg
+	this.$axios.$get('${1}', {
+		params: {
+			${2}
+		}
+	}).then(function (response) {
+		${3}
+	}.bind(this))

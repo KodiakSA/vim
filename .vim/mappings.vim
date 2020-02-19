@@ -33,6 +33,7 @@ nmap <Leader>pr :CtrlPMRU<cr>
 nmap <Leader>pm :CtrlPMixed<cr>
 
 nmap <C-T> :tag 
+nnoremap <Leader>. :CtrlPTag<cr>
 
 "-------------Laravel Specific--------------------"
 nmap <Leader>lr :tabedit routes/web.php<cr>

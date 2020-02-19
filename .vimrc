@@ -59,6 +59,29 @@ autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<cr>
 autocmd FileType php noremap <Leader>n :call PhpInsertUse()<cr>
 "------------------Vue-------------------"
 autocmd BufNewFile,BufRead *.vue set filetype=vue
+
+"----------------------Syntastic--------------------"
+set statusline+=%#warningsmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_vue_checkers = ['eslint']
+
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+let g:syntastic_javascript_eslint_args=['--fix']
+
+if matchstr(local_eslint, "^\/\\w") == ''
+  let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+  let g:syntastic_javascript_eslint_exec = local_eslint
+  let g:syntastic_vue_eslint_exec = local_eslint
+endif
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and

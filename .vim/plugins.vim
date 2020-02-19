@@ -14,7 +14,6 @@ call vundle#begin()
 	Plugin 	'garbas/vim-snipmate'
 	Plugin 	'rking/ag.vim'
 	Plugin 	'scrooloose/nerdtree'
-	Plugin 	'scrooloose/syntastic'
   Plugin  'pangloss/vim-javascript'
 	Plugin 	'skwp/greplace.vim'
 	Plugin 	'stephpy/vim-php-cs-fixer'
@@ -29,5 +28,6 @@ call vundle#begin()
   Plugin  'posva/vim-vue'
   Plugin  'bling/vim-bufferline'
   Plugin  'tpope/vim-dadbod'
+  Plugin  'vim-syntastic/syntastic'
 call vundle#end()					" required
 filetype plugin indent on				" require
