@@ -23,16 +23,20 @@ set hlsearch						"Highlight what you're searching for
 set incsearch						"Highlight incrementally on searching
 
 "-----------------Visuals---------------"
+"set background=dark
 colorscheme gruvbox
-set background=dark
 let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled = 1
 
 set backspace=indent,eol,start				"Make backspace behave like every other editor
 
-hi LineNr ctermbg=black
+""hi LineNr ctermbg=black
 
 let g:diminactive_use_syntax=1              "Dim the syntax in an inactive split
+
+set showmatch
+set matchtime=3
+
 "-----------------Split Management------"
 set splitbelow
 set splitright
@@ -52,15 +56,15 @@ let g:grep_cmd_opts="--line-numbers --noheading -- './*/' :!**/node_modules/**i 
 "-------------------PHP-----------------"
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile() 		"User PHP CS Fixer on save of the file
 function! IPhpInsertUse()
-	call PhpinsertUser()
-	call feedkeys('a', 'n')
+  call PhpinsertUser()
+  call feedkeys('a', 'n')
 endfunction
 autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<cr>
 autocmd FileType php noremap <Leader>n :call PhpInsertUse()<cr>
 "------------------Vue-------------------"
 autocmd BufNewFile,BufRead *.vue set filetype=vue
 
-"----------------------Syntastic--------------------"
+""----------------------Syntastic--------------------"
 set statusline+=%#warningsmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=*
@@ -82,6 +86,10 @@ if executable(local_eslint)
   let g:syntastic_javascript_eslint_exec = local_eslint
   let g:syntastic_vue_eslint_exec = local_eslint
 endif
+
+
+
+
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and

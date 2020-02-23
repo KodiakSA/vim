@@ -29,5 +29,7 @@ call vundle#begin()
   Plugin  'bling/vim-bufferline'
   Plugin  'tpope/vim-dadbod'
   Plugin  'vim-syntastic/syntastic'
+  Plugin  'preservim/nerdcommenter'
+  Plugin 'tpope/vim-sensible'
 call vundle#end()					" required
 filetype plugin indent on				" require
