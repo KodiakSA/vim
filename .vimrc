@@ -23,7 +23,7 @@ set hlsearch						"Highlight what you're searching for
 set incsearch						"Highlight incrementally on searching
 
 "-----------------Visuals---------------"
-"set background=dark
+set background=dark
 colorscheme gruvbox
 let g:airline_theme='dark'
 let g:airline#extensions#tabline#enabled = 1
