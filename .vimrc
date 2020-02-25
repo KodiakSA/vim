@@ -6,7 +6,7 @@ source ~/.vim/commands.vim
 source ~/.vim/fileextensions.vim
 
 syntax enable
-set number						"Activate line numbers
+set number relativenumber						"Activate line numbers
 set noerrorbells visualbell t_vb=			"No fucking bells!
 set complete=.,w,b,u 				"Set matching autocompletes
 set tw=260 					"Set the width od the current line buffer to go way longer	
@@ -36,6 +36,8 @@ let g:diminactive_use_syntax=1              "Dim the syntax in an inactive split
 
 set showmatch
 set matchtime=3
+
+set foldmethod=syntax                   "Folding in files
 
 "-----------------Split Management------"
 set splitbelow

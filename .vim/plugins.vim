@@ -31,5 +31,6 @@ call vundle#begin()
   Plugin  'vim-syntastic/syntastic'
   Plugin  'preservim/nerdcommenter'
   Plugin 'tpope/vim-sensible'
+  Plugin  'easymotion/vim-easymotion'
 call vundle#end()					" required
 filetype plugin indent on				" require
