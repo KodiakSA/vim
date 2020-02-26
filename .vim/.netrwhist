@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/forge/dev-api.highmark.tech/releases/20200207203536/app'
-let g:netrw_dirhist_2='/home/forge/dev-api.highmark.tech/releases/20200207203536/app/Http'
-let g:netrw_dirhist_3='/home/forge/dev-api.highmark.tech/releases/20200207203536/app/Http/Controllers'
-let g:netrw_dirhist_4='/home/forge/dev-api.highmark.tech/releases/20200207203536/app/Http'
-let g:netrw_dirhist_5='/home/forge/dev-api.highmark.tech/releases/20200207203536/app'
-let g:netrw_dirhist_6='/home/forge/dev-api.highmark.tech/releases/20200207203536'
-let g:netrw_dirhist_7='/Users/stephen/dev/highmark/dashboard.highmark.tech'
-let g:netrw_dirhist_8='/Users/stephen/dev/highmark/dashboard.highmark.tech/.git'
-let g:netrw_dirhist_9='/Users/stephen/dev/highmark/dashboard.highmark.tech'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/stephen/dev/dashboard.highmark.tech/pages'
