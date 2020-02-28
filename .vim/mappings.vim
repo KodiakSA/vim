@@ -67,3 +67,6 @@ nmap <Leader>gcd :G checkout dev<cr>
 nmap <Leader>gpl :G pull<cr>
 nmap <Leader>gph :G push<cr>
 nmap <Leader>gco :G commit . -m '
+
+"-------------Buffers--------------------------"
+nmap <Tab> :bn<cr>
