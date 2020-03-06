@@ -13,3 +13,12 @@ snippet lrg
 	Route::middleware(['${1}'])->group(function () {
 		${2}
 	});
+
+snippet lform
+	<form method="${1}" action="${2}">
+		@csrf
+		${3}
+		@error(${4})
+			<div class="alert alert-danger">{{ $message }}</div>
+		@enderror
+	</form>

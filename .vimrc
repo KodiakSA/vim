@@ -58,40 +58,20 @@ let g:grep_cmd_opts="--line-numbers --noheading -- './*/' :!**/node_modules/**i 
 "-------------------PHP-----------------"
 autocmd BufWritePost *.php silent! call PhpCsFixerFixFile() 		"User PHP CS Fixer on save of the file
 function! IPhpInsertUse()
-  call PhpinsertUser()
+  call PhpInsertUse()
   call feedkeys('a', 'n')
 endfunction
-autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<cr>
-autocmd FileType php noremap <Leader>n :call PhpInsertUse()<cr>
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<cr>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<cr>
+let g:php_namespace_sort_after_insert = 1
 "------------------Vue-------------------"
 autocmd BufNewFile,BufRead *.vue set filetype=vue
 
-""----------------------Syntastic--------------------"
-set statusline+=%#warningsmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=*
+"------------------Ale Lint & Fix-----------"
+let g:ale_linters = {'vue': ['eslint'], 'php': ['php_cs_fixer']}
+let g:ale_fixers = {'vue': ['prettier', 'eslint'], 'php': ['php_cs_fixer']}
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_vue_checkers = ['eslint']
-
-let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
-let g:syntastic_javascript_eslint_args=['--fix']
-
-if matchstr(local_eslint, "^\/\\w") == ''
-  let local_eslint = getcwd() . "/" . local_eslint
-endif
-if executable(local_eslint)
-  let g:syntastic_javascript_eslint_exec = local_eslint
-  let g:syntastic_vue_eslint_exec = local_eslint
-endif
-
-
-
-
+let g:ale_fix_on_save = 1
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and

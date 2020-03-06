@@ -54,19 +54,16 @@ nmap <Leader>vep :tabedit pages/
 nmap <Leader>sp :e ~/.vim/snippets/php.snippets<cr>
 nmap <Leader>sv :e ~/.vim/snippets/vue.snippets<cr>
 
-
-"-------------PHP CS Fixer-----------------------"
-nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
-
-
 "------------Git Commands-----------------------"
 nmap <Leader>gs :Gstatus<cr>
 nmap <Leader>gcm :G checkout master<cr>
 nmap <Leader>gcs :G checkout staging<cr>
 nmap <Leader>gcd :G checkout dev<cr>
+nmap <Leader>gct :G checkout
 nmap <Leader>gpl :G pull<cr>
 nmap <Leader>gph :G push<cr>
 nmap <Leader>gco :G commit . -m '
 
 "-------------Buffers--------------------------"
 nmap <Tab> :bn<cr>
+nmap <S-Tab> :bp<cr>
