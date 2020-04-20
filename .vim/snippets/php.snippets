@@ -22,3 +22,24 @@ snippet lform
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
 	</form>
+
+snippet tubi 
+	$table->unsignedBigInteger('${1}');
+
+snippet ts 
+	$table->string('${1}');
+
+snippet tns 
+	$table->string('${1}')->nullable();
+
+snippet ti 
+	$table->integer('${1}');
+	
+snippet tni 
+	$table->integer('${1}')->nullable();
+	
+snippet tfk
+	$table->foreign('${1}')->references('${2}')->on('${3}');
+
+snippet tfd
+	$table->float('${1}', ${2}, ${3})->default(${4});

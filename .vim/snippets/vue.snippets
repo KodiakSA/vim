@@ -54,13 +54,15 @@ snippet vimp
 
 snippet vrow
 	<v-row>
-		${1}
+		<v-col>
+			${1}
+		</v-col>
 	</v-row>
 
 snippet vcol
 	<v-col>
 		${1}
-	</v-row>
+	</v-col>
 
 snippet vtext
 	<v-text-field
@@ -94,6 +96,13 @@ snippet vswitch
 		v-model='${1}'
 		label='${@}'
 	/>
+
+snippet vwatch
+	watch: {
+		${1}: function (${2}) {
+			${3}
+		}
+	},
 
 snippet axiosp
 	this.$axios.$post('${1}', {

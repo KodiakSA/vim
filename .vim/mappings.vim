@@ -40,6 +40,8 @@ nmap <Leader>lr :tabedit routes/web.php<cr>
 nmap <Leader>la :tabedit routes/api.php<cr>
 nmap <Leader>lm :!php artisan make:
 nmap <Leader>lc :!php artisan command:
+nmap <Leader>lmi :!php artisan migrate<cr>
+nmap <Leader>lds :!php artisan db:seed<cr>
 nmap <Leader>lfc :CtrlP<cr>app/Http/Controllers/
 nmap <Leader>lfm :CtrlP<cr>app/Models/
 nmap <Leader>lfo :CtrlP<cr>app/Console/Commands/
@@ -67,3 +69,10 @@ nmap <Leader>gco :G commit . -m '
 "-------------Buffers--------------------------"
 nmap <Tab> :bn<cr>
 nmap <S-Tab> :bp<cr>
+
+"-------------Floaterm-------------------------"
+nmap <Leader>fn :FloatermNew position=bottomright height=0.6 width=0.3<cr>
+nmap <Leader>ft :FloatermToggle<cr>
+nmap <Leader>fh :FloatermHide<cr>
+nmap <Leader>fx :FloatermNext<cr>
+nmap <Leader>fp :FloatermPrev<cr>

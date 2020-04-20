@@ -27,8 +27,10 @@ call vundle#begin()
   Plugin  'bling/vim-bufferline'
   Plugin  'tpope/vim-dadbod'
   Plugin  'preservim/nerdcommenter'
-  Plugin 'tpope/vim-sensible'
+  Plugin  'tpope/vim-sensible'
   Plugin  'easymotion/vim-easymotion'
   Plugin  'dense-analysis/ale'
+  Plugin  'craigemery/vim-autotag'
+  Plugin  'voldikss/vim-floaterm'
 call vundle#end()					" required
 filetype plugin indent on				" require

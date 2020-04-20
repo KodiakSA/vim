@@ -72,6 +72,9 @@ let g:ale_linters = {'vue': ['eslint'], 'php': ['php_cs_fixer']}
 let g:ale_fixers = {'vue': ['prettier', 'eslint'], 'php': ['php_cs_fixer']}
 
 let g:ale_fix_on_save = 1
+
+let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and
