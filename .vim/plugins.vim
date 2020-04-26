@@ -32,5 +32,6 @@ call vundle#begin()
   Plugin  'dense-analysis/ale'
   Plugin  'craigemery/vim-autotag'
   Plugin  'voldikss/vim-floaterm'
+  Plugin  'rbong/vim-flog'
 call vundle#end()					" required
 filetype plugin indent on				" require
