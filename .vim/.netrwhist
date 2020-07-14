@@ -1,4 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/stephen/dev/api.highmark.tech/app/Helpers'
+let g:netrw_dirhist_4='/Users/stephen/dev/api.highmark.tech/app'
+let g:netrw_dirhist_3='/Users/stephen/dev/api.highmark.tech/app/Providers'
 let g:netrw_dirhist_2='/Users/stephen/dev/api.highmark.tech/database/migrations'
 let g:netrw_dirhist_1='/Users/stephen/dev/api.highmark.tech/app/Http/Controllers'
