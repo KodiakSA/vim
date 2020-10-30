@@ -1,5 +1,7 @@
 let mapleader = ',' 					"Default leader is \ but a , is easier
 
+language en_CA.UTF-8
+
 source ~/.vim/plugins.vim
 source ~/.vim/mappings.vim
 source ~/.vim/commands.vim
@@ -63,6 +65,8 @@ function! IPhpInsertUse()
 endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<cr>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<cr>
+autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUser()<cr>
+autocmd FileType php noremap <Leader>s :call PhpSortUse()<cr>
 let g:php_namespace_sort_after_insert = 1
 "------------------Vue-------------------"
 autocmd BufNewFile,BufRead *.vue set filetype=vue
@@ -75,6 +79,7 @@ let g:ale_fix_on_save = 1
 
 let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
+let g:autotagStartMethod='fork'
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and
