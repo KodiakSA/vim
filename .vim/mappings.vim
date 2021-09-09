@@ -1,5 +1,5 @@
 "Make it easy to edit .vimrc filecommands
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tabedit ~/.vimrc<cr>
 
 "Make it easy to edit the mappings file
 nmap <Leader>em :tabedit ~/.vim/mappings.vim<cr>
@@ -17,8 +17,17 @@ nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 nmap <Leader>esp :tabedit ~/.vim/snippets/php.snippets<cr>
 nmap <Leader>esv :tabedit ~/.vim/snippets/vue.snippets<cr>
 "Turn off highlight for search
-nmap <Leader><space> :nohlsearch<cr>
+nmap <Leader><Leader> space> :nohlsearch<cr>
 
+nmap <Leader>cb :bufdo bwipeout<cr>
+
+"---------------moving lines---------------------"
+nnoremap <c-j> :m .+1<CR>==
+inoremap <c-j> <Esc>:m .+1<CR>==gi
+vnoremap <c-j> :m '>+1<CR>gv=gv
+nnoremap <c-k> :m .-2<CR>==
+inoremap <c-k> <Esc>:m .-2<CR>==gi
+vnoremap <c-k> :m '<-2<CR>gv=gv
 "--------------Split Management------------------"
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
@@ -27,13 +36,13 @@ nmap <C-L> <C-w><C-L>
 
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>pi :PluginInstall<cr>
-nmap <Leader>pp :CtrlP<cr>
-nmap <Leader>pb :CtrlPBuffer<cr>
-nmap <Leader>pr :CtrlPMRU<cr>
-nmap <Leader>pm :CtrlPMixed<cr>
+nmap <Leader>pp :Files<cr>
+nmap <Leader>pg :Rg<cr>
+nmap <Leader>pl :Lines<cr>
+nmap <Leader>ph :History:<cr>
+nmap <Leader>pb :Buffers:<cr>
 
 nmap <C-T> :tag 
-nnoremap <Leader>. :CtrlPTag<cr>
 
 "-------------Laravel Specific--------------------"
 nmap <Leader>lr :tabedit routes/web.php<cr>
@@ -61,10 +70,14 @@ nmap <Leader>gs :Gstatus<cr>
 nmap <Leader>gcm :G checkout master<cr>
 nmap <Leader>gcs :G checkout staging<cr>
 nmap <Leader>gcd :G checkout dev<cr>
-nmap <Leader>gct :G checkout
-nmap <Leader>gpl :G pull<cr>
-nmap <Leader>gph :G push<cr>
-nmap <Leader>gco :G commit . -m '
+nnoremap <Leader>gg :GCheckout<cr>
+nnoremap <Leader>ga :G fetch --all<cr>
+nmap <Leader>gl :G pull<cr>
+nmap <Leader>gh :G push<cr>
+nmap <Leader>gco :G commit<cr>
+nmap <Leader>gm :G merge<cr>
+nmap <Leader>gj :diffget //3<cr>
+nmap <Leader>gf :diffget //2<cr>
 
 "-------------Buffers--------------------------"
 nmap <Tab> :bn<cr>

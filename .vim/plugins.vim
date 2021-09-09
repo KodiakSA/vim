@@ -6,8 +6,6 @@ set rtp+=~/.vim/bundle/Vundle.vim			" set runtime path to include Vundle
 call vundle#begin()
 	Plugin	'VundleVim/Vundle.vim'
 	Plugin	'arnaud-lb/vim-php-namespace'
-	Plugin	'ctrlpvim/ctrlp.vim'
-	Plugin	'tpope/vim-vinegar'
 	Plugin 	'MarcWeber/vim-addon-mw-utils'
 	Plugin 	'ervandew/supertab'
 	Plugin 	'garbas/vim-snipmate'
@@ -33,5 +31,16 @@ call vundle#begin()
   Plugin  'craigemery/vim-autotag'
   Plugin  'voldikss/vim-floaterm'
   Plugin  'rbong/vim-flog'
+  Plugin  'tomlion/vim-solidity'
+  Plugin  'mattn/emmet-vim'
 call vundle#end()					" required
+
+call plug#begin()
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+  Plug 'stsewd/fzf-checkout.vim'
+  Plug 'airblade/vim-rooter'
+  Plug 'iamcco/coc-tailwindcss', {'do': 'yarn install --frozen-lockfile && yarn run bulid'}
+call plug#end()
+
 filetype plugin indent on				" require

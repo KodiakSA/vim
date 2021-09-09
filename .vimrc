@@ -1,4 +1,6 @@
-let mapleader = ',' 					"Default leader is \ but a , is easier
+let mapleader = "\<Space>" 					"Default leader is \ but a , is easier
+
+set rtp+=/usr/local/opt/fzf
 
 language en_CA.UTF-8
 
@@ -13,6 +15,8 @@ set noerrorbells visualbell t_vb=			"No fucking bells!
 set complete=.,w,b,u 				"Set matching autocompletes
 set tw=260 					"Set the width od the current line buffer to go way longer	
 set wildignore+=*/tmp/*,*/node_modules/*,*/vendor/*,*/bower_components/*,*.so,*.swp,*.zip
+set autoread
+let g:snipMate = {'snippet_version' :1 }
 
 "-----------------Spacing---------------"
 set tabstop=2
@@ -63,10 +67,10 @@ function! IPhpInsertUse()
   call PhpInsertUse()
   call feedkeys('a', 'n')
 endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<cr>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<cr>
-autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUser()<cr>
-autocmd FileType php noremap <Leader>s :call PhpSortUse()<cr>
+" autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<cr>
+ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<cr>
+" autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUser()<cr>
+ autocmd FileType php noremap <Leader>s :call PhpSortUse()<cr>
 let g:php_namespace_sort_after_insert = 1
 "------------------Vue-------------------"
 autocmd BufNewFile,BufRead *.vue set filetype=vue
@@ -77,9 +81,14 @@ let g:ale_fixers = {'vue': ['prettier', 'eslint'], 'php': ['php_cs_fixer']}
 
 let g:ale_fix_on_save = 1
 
-let g:python_host_prog = '/usr/local/bin/python2'
+" let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:autotagStartMethod='fork'
+
+let g:fzf_layout = { 'window': { 'width': 0.4, 'height': 0.4 } } 
+let $FZF_DEFAULT_OPTS='--reverse'
+let $FZF_DEFAULT_COMMAND='rg --files --column'
+au BufEnter,BufNew *.blade.php :set filetype=html
 " Notes and Tips
 " - Press zz to instalntly center the line where the cursor is located
 "   when cursor is in a function call press Ctrl ] to go to that function, and
